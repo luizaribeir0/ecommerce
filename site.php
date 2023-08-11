@@ -7,6 +7,6 @@ $app->get('/', function() {
     $products = Product::listAll();
     $page = new Page();
     $page->setTpl("index", [
-        "products" => $products
+        "products" => Product::checkList($products)
     ]);
 });
